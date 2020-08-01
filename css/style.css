@@ -1,0 +1,770 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.center_space {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center_space h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+    font-family: 'Mulish', sans-serif;
+    color: rgba(39, 14, 39, 0.37);
+}
+
+.animate__animated .animate__bounce {
+    animation-direction: alternate;
+    animation: linear infinite;
+}
+
+.card {
+    position: relative;
+    height: 60vh;
+    background-color: transparent;
+    border: none!important;
+    box-shadow: 0 0 20px rgb(0, 0, 0, .4), inset -1px -1px 20px rgba(251, 243, 243, 0.671);
+    transition-duration: 400ms;
+    overflow: hidden;
+}
+
+.card::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0%;
+    background-image: linear-gradient(to right, rgba(210, 36, 226, 0.589) 10%, rgba(255, 210, 61, 0.568) 60%);
+    transition: .4s all ease-in-out;
+}
+
+.card:hover::before {
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-header {
+    position: relative;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent!important;
+    border: none!important;
+}
+
+.card-header .card_title {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    background: transparent;
+}
+
+.card-header .card_title p {
+    font-size: 2.5rem;
+    color: #e2dede;
+    margin-top: 10px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-body h2 {
+    font-size: 1.4rem;
+    margin: 16px 0 10px 0;
+    font-family: 'Mulish', sans-serif;
+    color: rgba(0, 0, 0, 0.459);
+}
+
+.card-body p {
+    font-family: 'Mulish', sans-serif;
+    color: rgba(0, 0, 0, 0.534);
+    margin-bottom: 8px;
+}
+
+.card-footer {
+    background-color: transparent;
+    height: 11vh;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-footer button {
+    z-index: 999!important;
+    cursor: pointer;
+    position: absolute;
+}
+
+.card-footer button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* additional css query */
+
+::selection {
+    background-color: red;
+    color: #ffffff;
+}
+
+
+/* card one css is here */
+
+.center_space_wibe {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(26, 3, 3, 0.822)!important;
+}
+
+#scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(138, 246, 253, 0.411);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background-image: linear-gradient(to top, rgb(248, 130, 33), rgb(21, 255, 0));
+    animation: anicode 5s linear infinite;
+    z-index: 1;
+}
+
+#percent {
+    position: fixed;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #ffff;
+}
+
+#progressbar::before,
+#progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(top top, #eeff00, #00ff00);
+    filter: blur(10px);
+}
+
+#progressbar::after {
+    filter: blur(10px);
+}
+
+@keyframes anicode {
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0%;
+}
+
+.title_state {
+    height: 23vh;
+    width: 100%;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_bx {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(../images/22.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgb(231, 231, 220), inset -1px -1px 20px rgba(240, 233, 233, 0.657);
+}
+
+
+/* typed css is here */
+
+#typed {
+    font-size: 1.7rem;
+    position: relative;
+    font-family: 'Mulish', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    color: #d8d7d7;
+}
+
+#typed::after {
+    content: '|';
+    display: inline;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+
+/* Cursor */
+
+.typed-cursor {
+    display: none;
+    opacity: 0;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main_txt {
+    color: rgb(255, 251, 0);
+    border-bottom: 1px solid rgb(255, 251, 0);
+    line-height: 1;
+}
+
+
+/* If fade out option is set */
+
+
+/* text_filder_code_here:) */
+
+.txt_fileder {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.52)), url(../images/one.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.txt_fileder p {
+    color: #d9d9d9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 80%;
+    text-shadow: 0 0 20px rgb(0, 0, 0, .5);
+    font-size: 1.2rem;
+}
+
+.scrolled_am {
+    width: 60px;
+    height: 90px;
+    border: 3px solid #ffff;
+    position: relative;
+    margin: auto;
+    display: block;
+    top: 10%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255, 254, 250, 0.979);
+}
+
+.scrolled_am::before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #ffff;
+    border-radius: 50%;
+    animation: anidef 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anidef {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.center_space_wibe1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top_watch_header {
+    font-weight: lighter;
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #00ff00;
+    letter-spacing: 2px;
+    position: relative;
+    width: 40%;
+    height: 70px;
+}
+
+.top_watch_header::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    border-bottom: 1px solid #00ff00;
+    transition-duration: 600ms;
+}
+
+.top_watch_header:hover::before {
+    width: 100%;
+}
+
+.box_define {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_define .box {
+    position: relative;
+    width: 27%;
+    height: 40vh;
+    margin: 0 10px;
+    box-shadow: 0 0 20px rgba(22, 247, 255, 0.931);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-reflect: below 10px linear-gradient(to right, transparent 10%, rgba(255, 232, 22, 0.698) 90%);
+    transform: skew(-20deg);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.box_define .box::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    transition-duration: 1300ms;
+    border-radius: 20px;
+}
+
+.box_define .box:hover::before {
+    width: 100%;
+    background-color: rgba(0, 240, 248, 0.466);
+    transform: rotate(360deg);
+}
+
+.box_define .box:nth-child(1) {
+    background-image: linear-gradient(to right, rgb(36, 36, 80)10%, rgb(255, 51, 0) 90%);
+}
+
+.box_define .box:nth-child(2) {
+    background-image: linear-gradient(to right, rgb(36, 36, 80)10%, rgb(0, 255, 34) 90%)
+}
+
+.box_define .box:nth-child(3) {
+    background-image: linear-gradient(to right, rgb(36, 36, 80)10%, rgb(0, 255, 242) 90%)
+}
+
+.box h1 {
+    color: #ffffff;
+    font-size: 7rem;
+    font-weight: lighter;
+}
+
+.box p {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+
+/* click menu degines */
+
+.bars_style {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1px 16px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.651), inset -1px -2px 10px rgba(255, 238, 238, 0.932);
+    border-radius: 20px;
+    transition-duration: 200px;
+    position: fixed;
+    right: 50px;
+    top: 10px;
+    z-index: 998;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.bars_style:active {
+    box-shadow: none;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 999;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgba(70, 51, 29, 0.671);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    /* using the flex box in advanced css */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    margin: 2px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidenav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 40px;
+    transition-duration: 500ms;
+}
+
+.sidenav a:hover::before {
+    border-bottom: 1px solid #ffffff;
+    width: 10%;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 46px;
+    margin-left: 50px;
+}
+
+.cube_rounded {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.boxing {
+    position: absolute;
+    transform: perspective(1000px) rotateY(-45deg);
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    margin: auto;
+    left: 16%;
+}
+
+.boxing:before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 10%;
+    width: 150%;
+    height: 140px;
+    background-color: rgb(251, 248, 53);
+    filter: blur(40px);
+    opacity: 1;
+    transform: rotateX(90deg);
+}
+
+.boxing div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg);
+    }
+}
+
+.boxing div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 105%;
+    height: 105%;
+    background: linear-gradient(10deg, #e47317, #eb4dd6d2, #35ff1aab);
+    border-radius: 50%;
+}
+
+.boxing div span:nth-child(1) {
+    transform: rotateX(0deg);
+}
+
+.boxing div span:nth-child(2) {
+    transform: rotateX(45deg);
+}
+
+.boxing div span:nth-child(3) {
+    transform: rotateX(-45deg);
+}
+
+.boxing div span:nth-child(4) {
+    transform: rotateX(90deg);
+}
+
+.boxing h1 {
+    transform: perspective(1000px) rotateY(-15deg);
+    position: absolute;
+    bottom: -40%;
+    font-size: 2.1rem;
+    transform: rotateX(30deg);
+    color: #acaf06;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.cont_code {
+    font-weight: lighter;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #00ff00;
+    letter-spacing: 2px;
+    position: relative;
+    width: 40%;
+    height: 70px;
+}
+
+.cont_code::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    border-bottom: 1px solid #00ff00;
+    transition-duration: 600ms;
+}
+
+.input_root {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px 0;
+    width: 60%;
+    padding: 10px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #00ff00;
+    color: #00ff00;
+}
+
+::placeholder {
+    color: #00ff00b7;
+    text-transform: capitalize;
+}
+
+.sub_btn input {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 50px;
+    margin: 20px 0;
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    text-transform: uppercase;
+}
+
+.sub_btn input:hover {
+    background-color: rgb(0, 255, 0);
+    color: rgb(10, 3, 3);
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+@media(max-width:768px) {
+    .media_state {
+        width: 50%!important;
+    }
+    .center_space {
+        height: auto;
+    }
+    .card {
+        margin: 10px 30px;
+    }
+    .card .card-header .card_title {
+        top: 7px;
+    }
+     ::-webkit-scrollbar {
+        width: 0%;
+    }
+    #percent {
+        right: 10px;
+    }
+    .extant_code {
+        margin-top: 20px;
+    }
+    .txt_fileder {
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        top: 70px;
+    }
+    .txt_fileder p {
+        color: #d9d9d9;
+        font-size: .7rem!important;
+        padding: 10px;
+    }
+    .scrolled_am {
+        width: 50px;
+        height: 90px;
+        top: 20%;
+        position: relative;
+    }
+    .top_watch_header {
+        width: 100%;
+        font-size: 2.3rem;
+    }
+    .top_watch_header:hover::before {
+        width: 60%;
+    }
+    .center_space_wibe1 {
+        height: auto;
+    }
+    .box_define {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .box_define .box {
+        width: 70%;
+        height: 40vh;
+        margin: 10px 0;
+        -webkit-box-reflect: unset;
+    }
+    .cube_rounded {
+        height: auto;
+    }
+    .stcode {
+        height: 75vh;
+    }
+    .cont_code {
+        font-size: 1.5rem;
+        margin: 10px 10px;
+    }
+}
